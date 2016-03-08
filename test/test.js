@@ -10,13 +10,13 @@
 var assert = require('assert');
 var condense = require('../');
 
-describe('condense', function () {
-  it('should condense newlines', function () {
+describe('condense', function() {
+  it('should condense newlines', function() {
     var actual = condense('\n\na\n\n\nb\nc\r\n\r\nd\n\n\n');
     assert.equal(actual, 'a\nb\nc\nd');
   });
 
-  it('should use the specified number of newlines', function () {
+  it('should use the specified number of newlines', function() {
     var actual = condense('\n\na\n\n\nb\nc\r\n\r\nd\n\n\n', '\n\n');
     assert.equal(actual, 'a\n\nb\n\nc\n\nd');
   });
