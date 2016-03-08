@@ -20,11 +20,11 @@
     "test": "mocha"
   },
   "dependencies": {
-    "arrayify-compact": "^0.1.0"
+    "is-whitespace": "^0.3.0"
   },
   "devDependencies": {
-    "verb": ">= 0.2.6",
-    "mocha": "*"
+    "gulp-format-md": "^0.1.7",
+    "mocha": "^2.4.5"
   },
   "keywords": [
     "docs",
@@ -36,8 +36,27 @@
     "verb"
   ],
   "verb": {
+    "run": true,
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
     "related": {
-      "list": []
+      "list": [
+        "arrayify-compact",
+        "array-unique",
+        "arr-union"
+      ]
+    },
+    "reflinks": [
+      "verb"
+    ],
+    "lint": {
+      "reflinks": true
     }
   }
 }
