@@ -19,11 +19,11 @@ describe('condense', function() {
 
   it('should use the specified number of newlines', function() {
     var actual = condense('\n\na\n\n\nb\nc\r\n\r\nd\n\n\n', {sep: '\n\n'});
-    assert.equal(actual, '\n\na\n\nb\nc\n\nd\n\n');
+    assert.equal(actual, '\n\na\n\nb\nc\n\nd\n');
   });
 
   it('should remove lines that are whitespace-only', function() {
     var actual = condense('\n\na\n\n\nb\n           \nc\r\n\r\nd\n\n\n', {sep: '\n\n'});
-    assert.equal(actual, '\n\na\n\nb\n\nc\n\nd\n\n');
+    assert.equal(actual, '\n\na\n\nb\n\nc\n\nd\n');
   });
 });

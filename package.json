@@ -20,7 +20,9 @@
     "test": "mocha"
   },
   "dependencies": {
-    "is-whitespace": "^0.3.0"
+    "extend-shallow": "^2.0.1",
+    "is-whitespace": "^0.3.0",
+    "kind-of": "^3.0.2"
   },
   "devDependencies": {
     "gulp-format-md": "^0.1.7",
@@ -36,27 +38,27 @@
     "verb"
   ],
   "verb": {
-    "run": true,
-    "toc": false,
-    "layout": "default",
-    "tasks": [
-      "readme"
-    ],
     "plugins": [
       "gulp-format-md"
     ],
-    "related": {
-      "list": [
-        "arrayify-compact",
-        "array-unique",
-        "arr-union"
-      ]
-    },
     "reflinks": [
       "verb"
     ],
+    "related": {
+      "list": [
+        "arr-union",
+        "array-unique",
+        "arrayify-compact"
+      ]
+    },
+    "run": true,
+    "toc": false,
+    "layout": "default",
     "lint": {
       "reflinks": true
-    }
+    },
+    "tasks": [
+      "readme"
+    ]
   }
 }
